@@ -1,0 +1,17 @@
+{
+    "Version": "2012-10-17",
+    "Id": "GalleryBucketPolicy",
+    "Statement": [
+        {
+            "Sid": "BucketPutDelete",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:DeleteObject",
+            "Resource": [
+                "arn:aws:s3:::gallery-web/index.html",
+                "arn:aws:s3:::gallery-web/style.css",
+                "arn:aws:s3:::gallery-web/images/*"
+            ]
+        }
+    ] 
+}

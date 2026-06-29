@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aleandro - Badge Gallery</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -14,34 +15,64 @@
         <p>An archive of my cloud computing accomplishments and professional certifications.</p>
     </header>
 
+    <div class="floating-socials">
+        <a href="https://github.com/Alean-de" target="_blank" class="social-btn github" title="GitHub Profile">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/aleandro-putra-febrianus-giawa-9558b8324/" target="_blank" class="social-btn linkedin" title="LinkedIn Profile">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+    </div>
+
     <main class="gallery-container">
         
-        <!-- Kartu Badge 1 -->
+        <!-- Kartu Badge 1 (Cloud 101) -->
         <a href="https://www.credly.com/badges/a644ca6d-e89d-46f8-ae24-1e33577fe496" target="_blank" class="gallery-item">
             <div class="badge-box">
                 <img src="images/aws-educate-cloud-101-training-badge.png" alt="AWS Cloud Computing 101 Training Badge">
+                <div class="badge-tags">
+                    <span>#CloudEssentials</span>
+                    <span>#IAM</span>
+                    <span>#GlobalInfrastructure</span>
+                </div>
             </div>
         </a>
         
-        <!-- Kartu Badge 2 -->
+        <!-- Kartu Badge 2 (Storage) -->
         <a href="https://www.credly.com/badges/1bfacbc4-67c2-4428-be6b-7a700b57b7ea" target="_blank" class="gallery-item">
             <div class="badge-box">
                 <img src="images/aws-educate-storage-training-badge.png" alt="AWS Getting Started with Storage Training Badge">
+                <div class="badge-tags">
+                    <span>#AmazonS3</span>
+                    <span>#EBS</span>
+                    <span>#EFS</span>
+                    <span>#StorageGateway</span>
+                </div>
+            </div>
+        </a>
+        
+        <!-- Kartu Badge 3 (Compute) -->
+        <a href="https://www.credly.com/badges/90459320-06ba-4818-bbc1-3b5dcab1e1ca" target="_blank" class="gallery-item">
+            <div class="badge-box">
+                <img src="images/aws-educate-compute-training-badge.png" alt="AWS Getting Started with Compute Training Badge">
+                <div class="badge-tags">
+                    <span>#AmazonEC2</span>
+                    <span>#AWSLambda</span>
+                    <span>#ELB</span>
+                    <span>#AutoScaling</span>
+                </div>
             </div>
         </a>
 
     </main>
 
     <footer>
-        <div class="footer-content" style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
-            <p style="color: #38bdf8; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; font-size: 0.85rem;">
-                Deployed via AWS S3 Static Website Hosting
+        <div class="footer-content">
+            <p>
+                <i class="fa-solid fa-cloud"></i> Hosted on <strong>Amazon S3</strong> Static Website Hosting
             </p>
-            <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 12px;">
-                This website gallery is hosted using <strong>Amazon Simple Storage Service (S3)</strong>, an object-based storage service designed to store and retrieve data from anywhere with high availability.
-            </p>
-            <div style="font-size: 0.8rem; color: #64748b; border-top: 1px solid #334155; padding-top: 10px;">
-                Root Bucket: <code style="color: #f1f5f9; background: #1e293b; padding: 2px 6px; border-radius: 4px;">s3://gallery-web/index.html</code>
+            <div class="s3-path">
+                <code>s3://badges-website/index.html</code>
             </div>
         </div>
     </footer>

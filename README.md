@@ -1,23 +1,23 @@
 ## 🚀 Project Showcase: Cloud Certification Gallery Board
 
-**📅 Date:** 2026-06-27
+**📅 Date:** June 27, 2026
 **🛠️ Tech Stack:** HTML5, CSS3, AWS S3 Static Website Hosting, LocalStack Docker
 
 ---
 
 ### 📌 Project Overview
-Bikin web portofolio statis dengan tema *Dark Mode* untuk pameran badge sertifikasi profesional. Desain dirombak total dari iframe Credly menjadi **Grid Gallery** responsif agar loading instan. 
+Developed a minimal, dark-themed static portfolio website designed to showcase professional cloud certification badges. The architecture was completely refactored from standard Credly iframes into a responsive **Grid Gallery** to achieve instantaneous page load times.
 
-Arsitektur penyimpanan file diunggah langsung ke root bucket S3 dengan struktur yang bersih:
-* 📄 `index.html` - Struktur utama web & integrasi link kredensial.
-* 🎨 `style.css` - Manajemen tata letak komponen visual.
-* 📁 `images/` - Folder penyimpanan khusus aset gambar badge lokal.
+The static files are deployed directly to the root of an Amazon S3 bucket with a clean directory structure:
+* 📄 `index.html` - Main application structure and validation hyperlink integrations.
+* 🎨 `style.css` - Layout management, component styling, and visual tokens.
+* 📁 `images/` - Dedicated directory for locally hosted high-resolution badge assets.
 
-Setiap kartu badge di dalamnya sudah dinamis dan terhubung ke link validasi publik Credly jika diklik.
+Each badge component is fully dynamic and securely routes users to its respective public Credly verification page upon interaction.
 
 ### 🔐 Security & Operations Note
-* Eksperimen pengamanan aset bucket via **AWS S3 Bucket Policy** (`policy.json`) untuk proteksi *anti-delete* terhadap file utama dan seluruh isi di dalam folder `images/`.
-* Deployment, manajemen objek, dan testing dilakukan secara lokal menggunakan ekosistem **LocalStack**.
+* Engineered access controls using an **AWS S3 Bucket Policy** (`policy.json`) to enforce explicit anti-delete protection, safeguarding the core site files and all assets inside the `images/` directory.
+* Conducted the entire deployment lifecycle, object management pipeline, and integration testing locally utilizing the **LocalStack** ecosystem to simulate a real AWS environment without incurring cloud costs.
 
-![Screenshot Web Galeri](images/live-preview.png)
-![Screenshot LocalStack](images/localstack.png)
+![Gallery Web Interface](live-preview.png)
+![LocalStack Environment Dashboard](localstack.png)

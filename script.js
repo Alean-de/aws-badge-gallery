@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         color: #f1f5f9;
         font-size: 1rem;
     `;
-    
+
     container.parentNode.insertBefore(searchInput, container);
 
     searchInput.addEventListener('input', (e) => {
